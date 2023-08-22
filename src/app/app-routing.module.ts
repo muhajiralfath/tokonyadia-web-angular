@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {LogiinComponent} from "./auth/logiin/logiin.component";
+import {RegisterComponent} from "./auth/register/register.component";
+import {NotfoundComponent} from "./shared/component/notfound/notfound.component";
 
 const routes: Routes = [
-  {path: "login" }
+  {path: "login" , component: LogiinComponent},
+  {path: "register", component: RegisterComponent},
+  {path: "**", component: NotfoundComponent},
+  {path: "", redirectTo: "login", pathMatch: "full"},
+  {path: "pages", loadChildren: () => import("./pages/pages.module").then(m => m.PagesModule)}
 ];
 
 @NgModule({
