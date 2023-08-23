@@ -7,7 +7,6 @@ import { RegisterComponent } from './auth/register/register.component';
 import { NotfoundComponent } from './shared/component/notfound/notfound.component';
 import { MaintenanceComponent } from './shared/component/maintenance/maintenance.component';
 import {LoginComponent} from "./auth/login/login.component";
-import { FooterComponent } from './shared/component/footer/footer.component';
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptor} from "./auth/interceptor/auth.interceptor";
 
@@ -17,8 +16,7 @@ import {AuthInterceptor} from "./auth/interceptor/auth.interceptor";
     RegisterComponent,
     NotfoundComponent,
     MaintenanceComponent,
-    LoginComponent,
-    FooterComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +26,6 @@ import {AuthInterceptor} from "./auth/interceptor/auth.interceptor";
     provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
   }],
   exports: [
-    FooterComponent
   ],
   bootstrap: [AppComponent]
 })

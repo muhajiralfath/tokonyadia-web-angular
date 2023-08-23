@@ -10,6 +10,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { StoreFormComponent } from './store/store-form/store-form.component';
 import { StoreListComponent } from './store/store-list/store-list.component';
 import { TrancListComponent } from './transaction/tranc-list/tranc-list.component';
+import {FooterComponent} from "../shared/component/footer/footer.component";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TrancListComponent } from './transaction/tranc-list/tranc-list.componen
     ProductListComponent,
     StoreFormComponent,
     StoreListComponent,
-    TrancListComponent
+    TrancListComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
