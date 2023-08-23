@@ -26,7 +26,6 @@ import {AuthInterceptor} from "./auth/interceptor/auth.interceptor";
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
-
   }],
   exports: [
     FooterComponent
