@@ -7,6 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { NotfoundComponent } from './shared/component/notfound/notfound.component';
 import { MaintenanceComponent } from './shared/component/maintenance/maintenance.component';
 import {LoginComponent} from "./auth/login/login.component";
+import { FooterComponent } from './shared/component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,17 @@ import {LoginComponent} from "./auth/login/login.component";
     RegisterComponent,
     NotfoundComponent,
     MaintenanceComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
+  exports: [
+    FooterComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
