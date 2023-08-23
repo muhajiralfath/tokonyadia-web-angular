@@ -43,7 +43,7 @@ export class AuthInterceptor implements HttpInterceptor {
               showConfirmButton: false,
               timer: 1500
             })
-            this.router.navigate(['404']);
+            this.router.navigate(['pages']);
           }
           return throwError(error);
         })

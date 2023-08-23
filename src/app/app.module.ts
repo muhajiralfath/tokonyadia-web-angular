@@ -8,6 +8,8 @@ import { NotfoundComponent } from './shared/component/notfound/notfound.componen
 import { MaintenanceComponent } from './shared/component/maintenance/maintenance.component';
 import {LoginComponent} from "./auth/login/login.component";
 import { FooterComponent } from './shared/component/footer/footer.component';
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthInterceptor} from "./auth/interceptor/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { FooterComponent } from './shared/component/footer/footer.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+
+  }],
   exports: [
     FooterComponent
   ],
